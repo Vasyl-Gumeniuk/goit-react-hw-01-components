@@ -8,7 +8,6 @@ function FriendList({ friends }) {
       {friends.map(({ avatar, name, isOnline, id }) => (
         <FriendListItem
           key={id}
-          id={id}
           avatar={avatar}
           name={name}
           isOnline={isOnline}
@@ -20,6 +19,7 @@ function FriendList({ friends }) {
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  id: PropTypes.number,
 };
 
 export default FriendList;
